@@ -1,0 +1,76 @@
+INFO:root:Started
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 0. alphabetic form is A
+DEBUG:root:signal exits at position 24. alphabetic form is Y
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 1. alphabetic form is B
+DEBUG:root:signal exits at position 17. alphabetic form is R
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 2. alphabetic form is C
+DEBUG:root:signal exits at position 20. alphabetic form is U
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 3. alphabetic form is D
+DEBUG:root:signal exits at position 7. alphabetic form is H
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 4. alphabetic form is E
+DEBUG:root:signal exits at position 16. alphabetic form is Q
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 5. alphabetic form is F
+DEBUG:root:signal exits at position 18. alphabetic form is S
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 6. alphabetic form is G
+DEBUG:root:signal exits at position 11. alphabetic form is L
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 7. alphabetic form is H
+DEBUG:root:signal exits at position 3. alphabetic form is D
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 8. alphabetic form is I
+DEBUG:root:signal exits at position 15. alphabetic form is P
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 9. alphabetic form is J
+DEBUG:root:signal exits at position 23. alphabetic form is X
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 10. alphabetic form is K
+DEBUG:root:signal exits at position 13. alphabetic form is N
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 11. alphabetic form is L
+DEBUG:root:signal exits at position 6. alphabetic form is G
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 12. alphabetic form is M
+DEBUG:root:signal exits at position 14. alphabetic form is O
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 13. alphabetic form is N
+DEBUG:root:signal exits at position 10. alphabetic form is K
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 14. alphabetic form is O
+DEBUG:root:signal exits at position 12. alphabetic form is M
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 15. alphabetic form is P
+DEBUG:root:signal exits at position 8. alphabetic form is I
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 16. alphabetic form is Q
+DEBUG:root:signal exits at position 4. alphabetic form is E
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 17. alphabetic form is R
+DEBUG:root:signal exits at position 1. alphabetic form is B
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 18. alphabetic form is S
+DEBUG:root:signal exits at position 5. alphabetic form is F
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 19. alphabetic form is T
+DEBUG:root:signal exits at position 25. alphabetic form is Z
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 20. alphabetic form is U
+DEBUG:root:signal exits at position 2. alphabetic form is C
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 21. alphabetic form is V
+DEBUG:root:signal exits at position 22. alphabetic form is W
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 22. alphabetic form is W
+DEBUG:root:signal exits at position 21. alphabetic form is V
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 23. alphabetic form is X
+DEBUG:root:signal exits at position 9. alphabetic form is J
+DEBUG:root:Reflector.encrypt(). Type UKW-B
+DEBUG:root:p is 24. alphabetic form is Y
+DEBUG:root:signal exits at position 0. alphabetic form is A
