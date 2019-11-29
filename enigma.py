@@ -63,8 +63,17 @@ class EnigmaMachine():
             self.sockets[i+1] = self.r_table[val] 
 
         logging.debug("set_sockets() finished.")
-        self.print_sockets(debug=True)
+        
+        # Need to reset rotors to position A
+        self.reset_rotor_settings()
 
+    
+    def reset_rotor_settings(self):
+        """ Resets rotor settings to setting A. """
+        for i in range(3):
+            self.sockets[i+1].reset_rotor()
+
+    
     def print_sockets(self, debug=False):
         if debug:
             for k,v in self.sockets.items():
@@ -73,19 +82,37 @@ class EnigmaMachine():
             for s in self.sockets.values():
                 print(s.type)
 
-    def set_socket_setting(self, sock_index, num):
+    def set_rotor_setting(self, sock_index, rotor_setting):
+        """ Sets the rotor setting of rotor in a socket. """
         if not isinstance(sock_index, int):
             raise TypeError("sock must be an integer")        
         if sock_index not in [1, 2, 3]:
             raise ValueError("sock must be 1, 2, or 3")
         
-        self.sockets[sock_index].set_setting(num)
+        self.sockets[sock_index].set_setting(rotor_setting)
         
 
 
     def rotate_rotors(self):
         """ Attempts to rotate all rotors. """
         logging.debug("rotate_rotors() called.")
+
+        # account for double stepping on middle rotor
+        index = self.sockets[2].setting
+        cur_set = self.alphabet_map[index]
+        if cur_set in self.sockets[2].notches:
+            logging.debug("Notch detected on socket 2's rotor")
+            logging.info("Wheel 2 current setting {}, notch {}".format(cur_set, self.sockets[2].notches))
+
+            logging.debug("rotating socket 2 (r{})".format(self.sockets[2].type)) # Rotate rotor 2
+            self.sockets[2].rotate()
+            
+            logging.debug("rotating socket 1 (r{})".format(self.sockets[1].type)) # Rotate rotor 1
+            self.sockets[1].rotate() 
+
+            logging.debug("rotating socket 3 (r{})".format(self.sockets[3].type)) # Rotate rotor 3
+            self.sockets[3].rotate()
+            return
 
         # 3rd rotor always rotates. if on notch, then rotate 2nd rotor as well.
         index = self.sockets[3].setting
@@ -103,18 +130,7 @@ class EnigmaMachine():
             self.sockets[3].rotate()
 
 
-        # account for double stepping on middle rotor
-        index = self.sockets[2].setting
-        cur_set = self.alphabet_map[index]
-        if cur_set in self.sockets[2].notches:
-            logging.debug("Notch detected on socket 2's rotor")
-            logging.info("Wheel 2 current setting {}, notch {}".format(cur_set, self.sockets[2].notches))
-
-            logging.debug("rotating socket 2 (r{})".format(self.sockets[2].type))
-            self.sockets[2].rotate()
-            
-            logging.debug("rotating socket 1 (r{})".format(self.sockets[1].type))
-            self.sockets[1].rotate() 
+        
             
     def switch_signal(self, num):        
         let = self.alphabet_map[num]        
@@ -249,8 +265,9 @@ if __name__ == "__main__":
 
     e = EnigmaMachine()
 
-    """
+    
     # Test case 1. basic
+    print("Test Case 1:")
     e.set_sockets([1,2,3])
 
     output = []
@@ -265,7 +282,7 @@ if __name__ == "__main__":
     answer = [x for x in ans]
 
     print(output == answer)
-    """
+    
 
     
     # Test case 2
@@ -283,6 +300,28 @@ if __name__ == "__main__":
     ans = "MXYLF DHFPX AGGTE RYJRQ DEAVG W".replace(" ", "")
     answer = [x for x in ans]
 
-    print(output)
-    print(answer)
+    #print(output)
+    #print(answer)
+    print(output == answer)
+    
 
+    # Test case 3: test double stepping
+    print("Test Case 3:")
+    e.set_sockets([1,2,3])
+    e.set_rotor_setting(2, 3) # Set socket 2's rotor to setting D
+    e.reset_plugboard()
+    output = []
+    for i in range(26):
+        num = i % 26
+        letter = e.alphabet_map[num]
+        c = e.step(num)
+        output.append(e.alphabet_map[c])
+
+    # What the Letters should match
+    ans = "DAZIH VYGPI TMSRZ KGGHL SRBLH L".replace(" ", "")
+    answer = [x for x in ans]
+
+    print(output == answer)
+    #print(answer)
+
+    

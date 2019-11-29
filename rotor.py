@@ -45,6 +45,10 @@ class Rotor():
 
         self.setting = num
 
+    def reset_rotor(self):
+        self.set_setting(0)
+
+
     def encrypt(self, p):
         """ p is Enter position. 
         Simulates electrical signal arriving and passing through rotor.
