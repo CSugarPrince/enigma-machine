@@ -98,7 +98,7 @@ class Rotor():
         return "Rotor type {}".format(self.type)
 
 if __name__ == "__main__":
-    logging.basicConfig(filename='rotor.log', level=logging.DEBUG, filemode='w')
+    logging.basicConfig(filename='old_rotor.log', level=logging.DEBUG, filemode='w')
     logging.info('Started')
 
     # Testing rotor 1
