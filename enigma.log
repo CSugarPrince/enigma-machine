@@ -272,7 +272,6 @@ INFO:root:Wheel 3 Encryption: T
 INFO:root:Plugboard Encryption: T
 INFO:root:Output (Lampboard): T
 INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 3 current setting V, notch ['V']
 INFO:root:Keyboard Input: V
 INFO:root:Rotors Position: ABW
 INFO:root:Plugboard Encryption: V
@@ -598,7 +597,6 @@ INFO:root:Wheel 3 Encryption: R
 INFO:root:Plugboard Encryption: R
 INFO:root:Output (Lampboard): R
 INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 3 current setting Q, notch ['Q']
 INFO:root:Keyboard Input: Q
 INFO:root:Rotors Position: ABR
 INFO:root:Plugboard Encryption: Q
@@ -1002,7 +1000,6 @@ INFO:root:Wheel 3 Encryption: S
 INFO:root:Plugboard Encryption: S
 INFO:root:Output (Lampboard): S
 INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 3 current setting V, notch ['V']
 INFO:root:Keyboard Input: V
 INFO:root:Rotors Position: AEW
 INFO:root:Plugboard Encryption: V
@@ -1016,7 +1013,6 @@ INFO:root:Wheel 3 Encryption: R
 INFO:root:Plugboard Encryption: R
 INFO:root:Output (Lampboard): R
 INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 2 current setting E, notch ['E']
 INFO:root:Keyboard Input: W
 INFO:root:Rotors Position: BFX
 INFO:root:Plugboard Encryption: W

@@ -23,9 +23,7 @@ class Rotor():
 
         self.setting = 0
 
-        logging.debug("contact_map: {}".format(self.contact_map))
-        logging.debug("notches: {}".format(self.notches))
-        logging.debug("setting: {}".format(self.setting))        
+              
         
 
     def rotate(self):

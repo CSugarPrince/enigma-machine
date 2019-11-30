@@ -15,7 +15,7 @@ class Rotor():
         # Create representation of internal wiring / rotor's inner core
         self.right = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
         self.left = [None for x in range(26)]
-        print("left len", len(self.left))
+        
 
         # Create left from map
         for letter in wiring_map:
@@ -30,7 +30,7 @@ class Rotor():
         self.left_initial = deepcopy(self.left)
 
         # Print rotor internals
-        self.print_internals()
+        #self.print_internals()
 
     
     def print_internals(self):
@@ -76,7 +76,8 @@ class Rotor():
 
     
     def encrypt(self, let):
-        # TODO: Error Checking
+        if let not in self.a:
+            raise ValueError("letter must be uppercase alphabetical character.")
 
         # Ex: encrypt 'A'. Rotor I. Ring setting 'B'. Offset 'A'
         i = self.a.index(let) # 0
@@ -91,7 +92,8 @@ class Rotor():
 
 
     def backwards_encrypt(self, let):
-        # TODO: Error Checking
+        if let not in self.a:
+            raise ValueError("letter must be uppercase alphabetical character.")
 
         # Ex: encrypt 'C'. Rotor I. Ring setting 'A'. Offset 'C'
         i = self.a.index(let) # 2
@@ -106,8 +108,9 @@ class Rotor():
 
 
     def set_initial_offset(self, let):
-        # Without resetting rotor, this will be a lil complicated
-
+        if let not in self.a:
+            raise ValueError("let has to be uppercase alphabetic character.")
+        
         # Rotor could be out of inital offset position.
         while self.rotation_offset != let:
             self.rotate()
