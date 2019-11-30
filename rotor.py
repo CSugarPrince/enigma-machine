@@ -1,121 +1,165 @@
-import logging
+from copy import deepcopy
 
 class Rotor():
 
-    def __init__(self, rtype, contact_map, notches):
-        """ Creates rotor. """
-        if not isinstance(contact_map, list):
-            raise TypeError("contact_map must be list")
-        if not isinstance(notches, list):
-            raise TypeError("notches must be list")
+    def __init__(self, name, wiring_map, notches):
 
-        logging.debug("Initializing rotor.")
+        # Alphabet map
+        self.a = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 
-        # Used in other methods
-        self.alphabet_map = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        self.name = name # I, II, III, etc...
+        self.ringstellung = "A"
+        self.rotation_offset = "A" 
+        self.notches = notches
 
-        self.type = rtype
+        # Create representation of internal wiring / rotor's inner core
+        self.right = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        self.left = [None for x in range(26)]
+        print("left len", len(self.left))
+
+        # Create left from map
+        for letter in wiring_map:
+            i = wiring_map.index(letter) # 0
+            let = self.a[i] # A
+            j = self.let_to_num(letter) # 4
+            self.left[j] = let
+
         
-        # convert letters to numbers 0-25
-        self.contact_map = [self.alphabet_map.index(let) for let in contact_map]
-                
-        self.notches = notches       
+        # Save initial settings for rotor
+        self.right_initial = deepcopy(self.right)
+        self.left_initial = deepcopy(self.left)
 
-        self.setting = 0
+        # Print rotor internals
+        self.print_internals()
 
-        logging.debug("contact_map: {}".format(self.contact_map))
-        logging.debug("notches: {}".format(self.notches))
-        logging.debug("setting: {}".format(self.setting))        
-        
+    
+    def print_internals(self):
+        print(self.name, "ring setting:", self.ringstellung,"rotation_offset:", self.rotation_offset)
+        for letter in self.a:
+            i = self.a.index(letter)
+            print(letter, self.left[i], self.right[i], letter)
+
+    def let_to_num(self, letter):
+        alphabet = [let for let in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        if letter not in alphabet:
+            raise ValueError("letter must be alphabetical and uppercase. e.g. 'A'")
+
+        return alphabet.index(letter)
 
     def rotate(self):
-        logging.debug("Before: {}".format(self.alphabet_map[self.setting]))
+        i = self.a.index(self.rotation_offset)
+        j = (i+1) % 26
+        self.rotation_offset = self.a[j]
 
-        # Rotates rotor once
-        self.setting = (self.setting + 1) % 26
+        # Rotate rotor's inner core up / left by one
+        self.right = self.right[1:] + self.right[:1]
+        self.left = self.left[1:] + self.left[:1]
 
-        logging.debug("After: {}".format(self.alphabet_map[self.setting]))
+         
+    def set_ringstellung(self, letter):
+        self.reset()
 
-       
-    def set_setting(self, num):
-        if not isinstance(num, int):
-            raise TypeError("arg num must be an int.")
-        if num < 0 or num > 25:
-            raise ValueError("num must between 0 and 25 inclusive.")
+        # Rotate inner core down / right
+        num = self.a.index(letter)
+        self.right = self.right[-num:] + self.right[:-num]
+        self.left = self.left[-num:] + self.left[:-num]
 
-        self.setting = num
-
-    def reset_rotor(self):
-        self.set_setting(0)
-
-
-    def encrypt(self, p):
-        """ p is Enter position. 
-        Simulates electrical signal arriving and passing through rotor.
-        Signal arrives at enter position.
-        From Enter position, signal hits input contact. 
-        Signal goes through internal mapping and goes to output contact.
-        From ouput contact, signal will exit through an exit position.
-        Output is output position in numeric form.
-        """
-        if p < 0 or p > 26:
-            raise ValueError("p must between 0 and 26 inclusive.")
-
-        logging.debug("Rotor.encrypt(). Type {}".format(self.type))
-        logging.debug("p is {}. alphabetic form is {}".format(p, self.alphabet_map[p]))
-
-        input_contact = (p + self.setting) % 26
-        logging.debug("signal hits input_contact {}. alphabetic form is {}".format(input_contact, self.alphabet_map[input_contact]))
-
-        output_contact = self.contact_map[input_contact]
-        logging.debug("rotor converts signal to {}. alphabetic form is {}".format(output_contact, self.alphabet_map[output_contact]))
-
-        exit_p = (output_contact - self.setting) % 26
-        logging.debug("signal exits at position {}. alphabetic form is {}".format(exit_p, self.alphabet_map[exit_p]))
-
-        return exit_p
+        self.ringstellung = letter
 
 
-    def backwards_encrypt(self, p):
-        """ Going from left to right. """
-        if p < 0 or p > 26:
-            raise ValueError("p must between 0 and 26 inclusive.")
+    def reset(self):
+        self.ringstellung = "A"
+        self.rotation_offset = "A" # Being safe
 
-        input_contact = (p + self.setting) % 26
-        output_contact = self.contact_map.index(input_contact)    
-        exit_p = (output_contact - self.setting) % 26
+        self.right = deepcopy(self.right_initial)
+        self.left = deepcopy(self.left_initial)
 
-        # Debug logs
-        logging.debug("Rotor.backwards_encrypt(). Type {}".format(self.type))
-        logging.debug("signal hits input_contact {}. alphabetic form is {}".format(input_contact, self.alphabet_map[input_contact]))
-        logging.debug("rotor converts signal to {}. alphabetic form is {}".format(output_contact, self.alphabet_map[output_contact]))
-        logging.debug("signal exits at position {}. alphabetic form is {}".format(exit_p, self.alphabet_map[exit_p]))
+    
+    def encrypt(self, let):
+        # TODO: Error Checking
 
-        return exit_p
+        # Ex: encrypt 'A'. Rotor I. Ring setting 'B'. Offset 'A'
+        i = self.a.index(let) # 0
+        
+        r = self.right[i] # Z
+
+        j = self.left.index(r) # 10
+
+        out = self.a[j] # K
+
+        return out
 
 
-    def __str__(self):
-        return "Rotor type {}".format(self.type)
+    def backwards_encrypt(self, let):
+        # TODO: Error Checking
+
+        # Ex: encrypt 'C'. Rotor I. Ring setting 'A'. Offset 'C'
+        i = self.a.index(let) # 2
+
+        l = self.left[i] # A
+
+        j = self.right.index(l) # 24
+
+        out = self.a[j] # Y
+
+        return out
+
+
+    def set_initial_offset(self, let):
+        # Without resetting rotor, this will be a lil complicated
+
+        # Rotor could be out of inital offset position.
+        while self.rotation_offset != let:
+            self.rotate()
+        
 
 if __name__ == "__main__":
-    logging.basicConfig(filename='old_rotor.log', level=logging.DEBUG, filemode='w')
-    logging.info('Started')
+    # Create rotor I
+    I = Rotor("I.", [letter for letter in "EKMFLGDQVZNTOWYHXUSPAIBRCJ"], ["Q"])
 
-    # Testing rotor 1
+    # General rotor method tests:
+    # Test rotating 27 times
+    for i in range(27):
+        I.rotate()
+        #I.print_internals() Good
 
-    """ Mapping for Rotor 1:
-    0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
-    A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z 
-    E  K  M  F  L  G  D  Q  V  Z  N  T  O  W  Y  H  X  U  S  P  A  I  B  R  C  J  
-    4  10 12 5 ....  
-    """
-    
-    r1_contact_map = [letter for letter in "EKMFLGDQVZNTOWYHXUSPAIBRCJ"]
-    rotor_1 = Rotor(1, r1_contact_map, ["Q"]) # If this rotor steps from Q to R, then the next rotor is advanced
+    # Test set_ringstellung. all letters in alphabet.
+    for letter in I.a:
+        I.set_ringstellung(letter)
+        I.print_internals()
 
-    # Test encrypting 'f' with an 'f' setting
-    rotor_1.set_setting(5)
-    rotor_1.encrypt(5)
-    
-    # Test reflect encrypt. Apparently works the same left-to-right as it does right-to-left
-    print(rotor_1.backwards_encrypt(9))
+    # Encrypt alphabet. ringstellung 'A'. offset 'A'
+    print("# Encrypt alphabet. ringstellung 'A'. offset 'A'")
+    I.set_ringstellung('A')
+    out = []
+    for x in I.a:
+        cipher = I.encrypt(x)
+        out.append(cipher)
+
+    ans = [x for x in "EKMFLGDQVZNTOWYHXUSPAIBRCJ"]
+    print(out)
+    print(ans)
+
+    # Encrypt alphabet. ringstellung 'B'. offset 'A'
+    print("# Encrypt alphabet. ringstellung 'B'. offset 'A'")
+    I.set_ringstellung('B')
+    out = []
+    for x in I.a:
+        cipher = I.encrypt(x)
+        out.append(cipher)
+
+    ans = [x for x in "KFLNGMHERWAOUPXZIYVTQBJCSD"]
+    print(out)
+    print(ans)
+
+
+
+    # Set initial_rotational_offset 'C'
+    print("# Set initial_rotational_offset 'C'")
+    I.set_initial_offset('C')
+    I.print_internals()
+
+    # Set initial_rotational_offset 'B'
+    print("# Set initial_rotational_offset 'B'")
+    I.set_initial_offset('B')
+    I.print_internals()
