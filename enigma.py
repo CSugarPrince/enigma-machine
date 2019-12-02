@@ -8,14 +8,18 @@ from reflector import Reflector
 class EnigmaMachine():
     def __init__(self):
         # Create all rotors used in a M3 Enigma machine
-        self.r1 = Rotor(1, [letter for letter in "EKMFLGDQVZNTOWYHXUSPAIBRCJ"], ["Q"])
-        self.r2 = Rotor(2, [letter for letter in "AJDKSIRUXBLHWTMCQGZNPYFVOE"], ["E"])
-        self.r3 = Rotor(3, [letter for letter in "BDFHJLCPRTXVZNYEIWGAKMUSQO"], ["V"])
+        self.r1 = Rotor("I", [letter for letter in "EKMFLGDQVZNTOWYHXUSPAIBRCJ"], ["Q"])
+        self.r2 = Rotor("II", [letter for letter in "AJDKSIRUXBLHWTMCQGZNPYFVOE"], ["E"])
+        self.r3 = Rotor("III", [letter for letter in "BDFHJLCPRTXVZNYEIWGAKMUSQO"], ["V"])
+        self.r4 = Rotor("IV", [letter for letter in "ESOVPZJAYQUIRHXLNFTGKDCMWB"], ["J"])
+        self.r5 = Rotor("V", [letter for letter in "VZBRGITYUPSDNHLXAWMJQOFECK"], ["Z"])
         # Store rotors in number mapped dictionary
         self.r_table = {
             1: self.r1,
             2: self.r2,
-            3: self.r3
+            3: self.r3,
+            4: self.r4,
+            5: self.r5
         }
         
         # plugboard
@@ -36,8 +40,13 @@ class EnigmaMachine():
 
         self.reflector = self.reflectors_available["UKW-B"]
 
-        self.alphabet_map = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        self.a = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 
+
+    def set_reflector(self, name):
+        if name not in self.reflectors_available.keys():
+            raise ValueError("name must be either 'UKW-B' or 'UKW-C'")
+        self.reflector = self.reflectors_available[name]
 
     def set_sockets(self, l):
         """ Sets sockets. l is list of rotors in ascending socket order. Ex:
@@ -54,117 +63,138 @@ class EnigmaMachine():
         for item in l:
             if not isinstance(item, int):
                 raise ValueError("each item in l must be an integer")
-            if item not in [1,2,3]:
-                raise ValueError("l must contain the numbers 1,2,3")
+            if item not in [1,2,3,4,5]:
+                raise ValueError("l must contain 3 of the following numbers 1,2,3,4,5")
         
-        logging.debug("set_sockets() called. l is {}".format(l))
+        # TODO: no duplicates
+        if len(l) != len(set(l)):
+            raise ValueError("l cannot have any duplicates")
+
         for i in range(len(l)):
             val = l[i]
             self.sockets[i+1] = self.r_table[val] 
-
-        logging.debug("set_sockets() finished.")
+        
         
         # Need to reset rotors to position A
         self.reset_rotor_settings()
 
     
-    def reset_rotor_settings(self):
-        """ Resets rotor settings to setting A. """
+    def reset_rotor_settings(self, pos=None):
+        """ Resets rotor settings to ringstellung A, offset A. """
+        
+        # pos has to be int
+        if pos is not None: 
+            self.sockets[pos].reset()
+            return
+
         for i in range(3):
-            self.sockets[i+1].reset_rotor()
+            self.sockets[i+1].reset()
+
+        
 
     
     def print_sockets(self, debug=False):
-        if debug:
-            for k,v in self.sockets.items():
-                logging.debug("sock {}: {}".format(k, str(v)))
-        else:
-            for s in self.sockets.values():
-                print(s.type)
+        print("print_sockets not implemented yet!")
 
-    def set_rotor_setting(self, sock_index, rotor_setting):
+
+    def set_rotor_ringstellung(self, sock_index, ringstellung):
+        """ Sets rotor's ringstellung. """
+        if not isinstance(sock_index, int):
+            raise TypeError("sock must be an integer")        
+        if sock_index not in [1, 2, 3]:
+            raise ValueError("sock must be 1, 2, or 3")
+
+        self.sockets[sock_index].set_ringstellung(ringstellung)
+
+
+    def set_rotor_initial_offset(self, sock_index, offset):
         """ Sets the rotor setting of rotor in a socket. """
         if not isinstance(sock_index, int):
             raise TypeError("sock must be an integer")        
         if sock_index not in [1, 2, 3]:
             raise ValueError("sock must be 1, 2, or 3")
         
-        self.sockets[sock_index].set_setting(rotor_setting)
+        self.sockets[sock_index].set_initial_offset(offset)
         
 
 
     def rotate_rotors(self):
-        """ Attempts to rotate all rotors. """
-        logging.debug("rotate_rotors() called.")
+        """ First step every time key is pressed. Attempt to rotate all rotors. """
+        
+        left_rot = self.sockets[1]
+        mid_rot = self.sockets[2]
+        right_rot = self.sockets[3]
 
-        # account for double stepping on middle rotor
-        index = self.sockets[2].setting
-        cur_set = self.alphabet_map[index]
-        if cur_set in self.sockets[2].notches:
-            logging.debug("Notch detected on socket 2's rotor")
-            logging.info("Wheel 2 current setting {}, notch {}".format(cur_set, self.sockets[2].notches))
-
-            logging.debug("rotating socket 2 (r{})".format(self.sockets[2].type)) # Rotate rotor 2
-            self.sockets[2].rotate()
+        # If on middle rotor's notch. rotate all three rotors
+        on_mid_rot_notch = mid_rot.rotation_offset in mid_rot.notches
+        if on_mid_rot_notch:
             
-            logging.debug("rotating socket 1 (r{})".format(self.sockets[1].type)) # Rotate rotor 1
-            self.sockets[1].rotate() 
+            left_rot.rotate() # rotate left rotor
+            mid_rot.rotate() # double-step causes middle rotor to rotate           
+            right_rot.rotate() # right rotor always rotates
 
-            logging.debug("rotating socket 3 (r{})".format(self.sockets[3].type)) # Rotate rotor 3
-            self.sockets[3].rotate()
             return
 
-        # 3rd rotor always rotates. if on notch, then rotate 2nd rotor as well.
-        index = self.sockets[3].setting
-        cur_set = self.alphabet_map[index]
-        if cur_set in self.sockets[3].notches:
-            logging.info("Wheel 3 current setting {}, notch {}".format(cur_set, self.sockets[3].notches))
-            logging.debug("rotating socket 3 (r{})".format(self.sockets[3].type))
-            self.sockets[3].rotate()
+        # If on right rotor's notch. rotate middle and right rotor
+        on_right_rot_notch = right_rot.rotation_offset in right_rot.notches
+        if on_right_rot_notch:
             
-            logging.debug("rotating socket 2 (r{})".format(self.sockets[2].type))
-            self.sockets[2].rotate() 
-            
-        else:
-            logging.debug("rotating socket 3 (r{})".format(self.sockets[3].type))
-            self.sockets[3].rotate()
+            mid_rot.rotate() 
+            right_rot.rotate() 
+        
+        else:            
+            right_rot.rotate()
 
 
         
             
-    def switch_signal(self, num):        
-        let = self.alphabet_map[num]        
+    def switch_signal(self, letter):        
+        if letter not in self.a:
+            raise ValueError("letter must be uppercase alphabetical character.")        
         pb = self.plugboard
 
         # Check if let has a plugboard pair
         for pair in pb:
-            if let in pair:                
-                # return number of letter it is paired with 
+            if letter in pair:                
+                # return letter it is paired with 
                 for x in pair:
-                    if x != let:
+                    if x != letter:
                         logging.debug("plugboard pair found {}, x is {}".format(pair, x))
-                        val = self.alphabet_map.index(x)
-                        return val
+                        return x
 
-        # If pair not found, return original num
+        # If pair not found, return original letter
         logging.debug("no plugboard pair found")
-        return num
+        return letter
         
+    def encrypt_msg(self, msg):
+        """ Encrypts a message / string. """
+        if not isinstance(msg, str):
+            raise TypeError("msg must be a string")
+        
+        # Get rid of whitespaces
+        msg = msg.replace(" ", "")
+        
+        cipher_text = []
+        for letter in msg:
+            c = self.step(letter)
+            cipher_text.append(c)
 
+        return cipher_text
 
-    def step(self, num):
+    def step(self, letter):
         """ Encrypts / Decrypts one letter. The meat of the enigma machine."""
+        if letter not in self.a:
+            raise ValueError("letter must be uppercase alphabetical character.")
         
-        logging.debug("step() called. num is {}".format(num))
 
         # switch signal using plugboard
-        new_num = self.switch_signal(num)
+        new_let = self.switch_signal(letter)
         
         # Attempt to rotate all rotors.
         self.rotate_rotors()
 
         # encrypt signal (input) through rotors. Signal hits third rotor first.
-        out_1 = self.sockets[3].encrypt(new_num)
+        out_1 = self.sockets[3].encrypt(new_let)
         out_2 = self.sockets[2].encrypt(out_1)
         out_3 = self.sockets[1].encrypt(out_2)
 
@@ -180,43 +210,38 @@ class EnigmaMachine():
         fin = self.switch_signal(out_7)
 
         # Info logs 
-        logging.info("Keyboard Input: {}".format(self.alphabet_map[num]))
-        logging.info("Rotors Position: {}{}{}".format(self.alphabet_map[self.sockets[1].setting], self.alphabet_map[self.sockets[2].setting], self.alphabet_map[self.sockets[3].setting] ))
-        logging.info("Plugboard Encryption: {}".format(self.alphabet_map[new_num]))
-        logging.info("Wheel 3 Encryption: {}".format(self.alphabet_map[out_1]))
-        logging.info("Wheel 2 Encryption: {}".format(self.alphabet_map[out_2]))
-        logging.info("Wheel 1 Encryption: {}".format(self.alphabet_map[out_3]))
-        logging.info("Reflector Encryption: {}".format(self.alphabet_map[out_4]))
-        logging.info("Wheel 1 Encryption: {}".format(self.alphabet_map[out_5]))
-        logging.info("Wheel 2 Encryption: {}".format(self.alphabet_map[out_6]))
-        logging.info("Wheel 3 Encryption: {}".format(self.alphabet_map[out_7]))
-        logging.info("Plugboard Encryption: {}".format(self.alphabet_map[fin]))
-        logging.info("Output (Lampboard): {}".format(self.alphabet_map[fin]))
+        logging.info("Keyboard Input: {}".format(letter))
+        logging.info("Rotors Position: {}{}{}. Ringstellung: {}{}{}".format(self.sockets[1].rotation_offset, self.sockets[2].rotation_offset, self.sockets[3].rotation_offset, self.sockets[1].ringstellung, self.sockets[2].ringstellung, self.sockets[3].ringstellung ))
+        logging.info("Plugboard Encryption: {}".format(new_let))
+        logging.info("Wheel 3 Encryption: {}".format(out_1))
+        logging.info("Wheel 2 Encryption: {}".format(out_2))
+        logging.info("Wheel 1 Encryption: {}".format(out_3))
+        logging.info("Reflector Encryption: {}".format(out_4))
+        logging.info("Wheel 1 Encryption: {}".format(out_5))
+        logging.info("Wheel 2 Encryption: {}".format(out_6))
+        logging.info("Wheel 3 Encryption: {}".format(out_7))
+        logging.info("Plugboard Encryption: {}".format(fin))
+        logging.info("Output (Lampboard): {}".format(fin))
         logging.info("--------------------------------------------------------------------")
 
         return fin
 
 
 
-    def encrypt_msg(self, msg):
-        """ Encrypts a message / string. """
-        pass
+    
 
     def create_plugboard_pair(self, let_1, let_2):
         """ Connect two letters on plugboard. """
-        if not isinstance(let_1, str):
-            raise TypeError("let_1 needs to string")
-        if len(let_1) != 1:
-            raise ValueError("let_1 needs to be a single character")
-        if not isinstance(let_2, str):
-            raise TypeError("let_2 needs to be a string")
-        if len(let_2) != 1:
-            raise ValueError("let_2 needs to be a single character")
-        if let_1.upper() == let_2.upper():
+        if let_1 not in self.a:
+            raise ValueError("let_1 must be uppercase alphabetical character.")
+        if let_2 not in self.a:
+            raise ValueError("let_2 must be uppercase alphabetical character.")
+        if let_1 == let_2:
             raise ValueError("let_1 cannot be the same as let_2")
-
-        let_1 = let_1.upper()
-        let_2 = let_2.upper()
+        if len(self.plugboard) == 10:
+            print("Error: Plugboard already has maximum of ten pairs.")
+            return
+           
 
         logging.debug("create_plugboard_pair() called")
 
@@ -265,7 +290,7 @@ if __name__ == "__main__":
 
     e = EnigmaMachine()
 
-    
+    """
     # Test case 1. basic
     print("Test Case 1:")
     e.set_sockets([1,2,3])
@@ -273,9 +298,9 @@ if __name__ == "__main__":
     output = []
     for i in range(30):
         num = i % 26
-        letter = e.alphabet_map[num]
-        c = e.step(num)
-        output.append(e.alphabet_map[c])
+        letter = e.a[num]
+        c = e.step(letter)
+        output.append(c)
 
     # What the Letters should match
     ans = "BJELR QZVJW ARXSN BXORS TNCFM EYYAQ".replace(" ", "")
@@ -292,9 +317,9 @@ if __name__ == "__main__":
     output = []
     for i in range(26):
         num = i % 26
-        letter = e.alphabet_map[num]
-        c = e.step(num)
-        output.append(e.alphabet_map[c])
+        letter = e.a[num]
+        c = e.step(letter)
+        output.append(c)
 
     # What the Letters should match
     ans = "MXYLF DHFPX AGGTE RYJRQ DEAVG W".replace(" ", "")
@@ -304,18 +329,18 @@ if __name__ == "__main__":
     #print(answer)
     print(output == answer)
     
-
+    
     # Test case 3: test double stepping
     print("Test Case 3:")
     e.set_sockets([1,2,3])
-    e.set_rotor_setting(2, 3) # Set socket 2's rotor to setting D
+    e.set_rotor_initial_offset(2, "D") # Set socket 2's rotor to setting D
     e.reset_plugboard()
     output = []
     for i in range(26):
         num = i % 26
-        letter = e.alphabet_map[num]
-        c = e.step(num)
-        output.append(e.alphabet_map[c])
+        letter = e.a[num]
+        c = e.step(letter)
+        output.append(c)
 
     # What the Letters should match
     ans = "DAZIH VYGPI TMSRZ KGGHL SRBLH L".replace(" ", "")
@@ -323,5 +348,68 @@ if __name__ == "__main__":
 
     print(output == answer)
     #print(answer)
-
+    """
     
+    
+    # Final test case.
+    out = []
+
+    # Set sockets to Rotors I,II,III 
+    # Set Reflector to UKW-C   
+    # Encrypt "ABCDE"
+    e.set_sockets([1,2,3])
+    e.set_reflector("UKW-C")
+    val = e.encrypt_msg("AB CDE")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+
+    # Set Reflector to UKW-B
+    # Change socket 1 rotor setting. Ringstellung "K", Offset "C"
+    # Change socket 3 rotor setting. Ringstellung "F", Offset "H"    
+    # Encrypt "FGHIJ"
+    e.set_reflector("UKW-B")
+    e.set_rotor_ringstellung(1, "K")
+    e.set_rotor_initial_offset(1, "C")
+    e.set_rotor_ringstellung(3, "F")
+    e.set_rotor_initial_offset(3, "H")
+    
+    val = e.encrypt_msg("FGHIJ")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+           
+
+    # Change sockets to Rotors to III, IV, V
+    # Encrypt "KLMNO"
+    e.set_sockets([3,4,5])
+    val = e.encrypt_msg("KLMNO")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+        
+
+    # Change Middle Rotor offset to J. (Double Step test)
+    # Encrypt "PQRST"
+    e.set_rotor_initial_offset(2, "J")
+    val = e.encrypt_msg("PQRST")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+
+    # Make Plugboard pairs (U, A), (V, D)
+    # Encrypt "UVWXYZ"
+    e.create_plugboard_pair("U", "A")
+    e.create_plugboard_pair("V", "D")
+    val = e.encrypt_msg("UVWXYZ")
+    for x in val:
+        out.append(x)
+    
+
+    print(out)
+    
+    ans = [letter for letter in "PXSVV JAXYZ FUIAH FCEIH HIXIFI"]
+    print(ans)
+    print(out == ans)
+
+    # Victory at last!!!
