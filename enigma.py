@@ -11,11 +11,15 @@ class EnigmaMachine():
         self.r1 = Rotor("I", [letter for letter in "EKMFLGDQVZNTOWYHXUSPAIBRCJ"], ["Q"])
         self.r2 = Rotor("II", [letter for letter in "AJDKSIRUXBLHWTMCQGZNPYFVOE"], ["E"])
         self.r3 = Rotor("III", [letter for letter in "BDFHJLCPRTXVZNYEIWGAKMUSQO"], ["V"])
+        self.r4 = Rotor("IV", [letter for letter in "ESOVPZJAYQUIRHXLNFTGKDCMWB"], ["J"])
+        self.r5 = Rotor("V", [letter for letter in "VZBRGITYUPSDNHLXAWMJQOFECK"], ["Z"])
         # Store rotors in number mapped dictionary
         self.r_table = {
             1: self.r1,
             2: self.r2,
-            3: self.r3
+            3: self.r3,
+            4: self.r4,
+            5: self.r5
         }
         
         # plugboard
@@ -39,6 +43,11 @@ class EnigmaMachine():
         self.a = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 
 
+    def set_reflector(self, name):
+        if name not in self.reflectors_available.keys():
+            raise ValueError("name must be either 'UKW-B' or 'UKW-C'")
+        self.reflector = self.reflectors_available[name]
+
     def set_sockets(self, l):
         """ Sets sockets. l is list of rotors in ascending socket order. Ex:
         [2, 1, 3]
@@ -54,10 +63,12 @@ class EnigmaMachine():
         for item in l:
             if not isinstance(item, int):
                 raise ValueError("each item in l must be an integer")
-            if item not in [1,2,3]:
-                raise ValueError("l must contain the numbers 1,2,3")
+            if item not in [1,2,3,4,5]:
+                raise ValueError("l must contain 3 of the following numbers 1,2,3,4,5")
         
         # TODO: no duplicates
+        if len(l) != len(set(l)):
+            raise ValueError("l cannot have any duplicates")
 
         for i in range(len(l)):
             val = l[i]
@@ -76,6 +87,17 @@ class EnigmaMachine():
     
     def print_sockets(self, debug=False):
         print("print_sockets not implemented yet!")
+
+
+    def set_rotor_ringstellung(self, sock_index, ringstellung):
+        """ Sets rotor's ringstellung. """
+        if not isinstance(sock_index, int):
+            raise TypeError("sock must be an integer")        
+        if sock_index not in [1, 2, 3]:
+            raise ValueError("sock must be 1, 2, or 3")
+
+        self.sockets[sock_index].set_ringstellung(ringstellung)
+
 
     def set_rotor_initial_offset(self, sock_index, offset):
         """ Sets the rotor setting of rotor in a socket. """
@@ -136,7 +158,20 @@ class EnigmaMachine():
         logging.debug("no plugboard pair found")
         return letter
         
+    def encrypt_msg(self, msg):
+        """ Encrypts a message / string. """
+        if not isinstance(msg, str):
+            raise TypeError("msg must be a string")
+        
+        # Get rid of whitespaces
+        msg = msg.replace(" ", "")
+        
+        cipher_text = []
+        for letter in msg:
+            c = self.step(letter)
+            cipher_text.append(c)
 
+        return cipher_text
 
     def step(self, letter):
         """ Encrypts / Decrypts one letter. The meat of the enigma machine."""
@@ -185,9 +220,7 @@ class EnigmaMachine():
 
 
 
-    def encrypt_msg(self, msg):
-        """ Encrypts a message / string. """
-        pass
+    
 
     def create_plugboard_pair(self, let_1, let_2):
         """ Connect two letters on plugboard. """
@@ -248,7 +281,7 @@ if __name__ == "__main__":
 
     e = EnigmaMachine()
 
-    
+    """
     # Test case 1. basic
     print("Test Case 1:")
     e.set_sockets([1,2,3])
@@ -306,5 +339,68 @@ if __name__ == "__main__":
 
     print(output == answer)
     #print(answer)
-
+    """
     
+    
+    # Final test case.
+    out = []
+
+    # Set sockets to Rotors I,II,III 
+    # Set Reflector to UKW-C   
+    # Encrypt "ABCDE"
+    e.set_sockets([1,2,3])
+    e.set_reflector("UKW-C")
+    val = e.encrypt_msg("AB CDE")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+
+    # Set Reflector to UKW-B
+    # Change socket 1 rotor setting. Ringstellung "K", Offset "C"
+    # Change socket 3 rotor setting. Ringstellung "F", Offset "H"    
+    # Encrypt "FGHIJ"
+    e.set_reflector("UKW-B")
+    e.set_rotor_ringstellung(1, "K")
+    e.set_rotor_initial_offset(1, "C")
+    e.set_rotor_ringstellung(3, "F")
+    e.set_rotor_initial_offset(3, "H")
+    
+    val = e.encrypt_msg("FGHIJ")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+           
+
+    # Change sockets to Rotors to III, IV, V
+    # Encrypt "KLMNO"
+    e.set_sockets([3,4,5])
+    val = e.encrypt_msg("KLMNO")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+        
+
+    # Change Middle Rotor offset to J. (Double Step test)
+    # Encrypt "PQRST"
+    e.set_rotor_initial_offset(2, "J")
+    val = e.encrypt_msg("PQRST")
+    for x in val:
+        out.append(x)
+    out.append(" ")
+
+    # Make Plugboard pairs (U, A), (V, D)
+    # Encrypt "UVWXYZ"
+    e.create_plugboard_pair("U", "A")
+    e.create_plugboard_pair("V", "D")
+    val = e.encrypt_msg("UVWXYZ")
+    for x in val:
+        out.append(x)
+    
+
+    print(out)
+    
+    ans = [letter for letter in "PXSVV JAXYZ FUIAH FCEIH HIXIFI"]
+    print(ans)
+    print(out == ans)
+
+    # Victory at last!!!

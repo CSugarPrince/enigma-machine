@@ -57,6 +57,7 @@ class Rotor():
 
          
     def set_ringstellung(self, letter):
+        """
         self.reset()
 
         # Rotate inner core down / right
@@ -65,6 +66,14 @@ class Rotor():
         self.left = self.left[-num:] + self.left[:-num]
 
         self.ringstellung = letter
+        """
+        while letter != self.ringstellung:
+            # Rotate inner core down/ right
+            self.right = self.right[-1:] + self.right[:-1]
+            self.left = self.left[-1:] + self.left[:-1]
+
+            index = self.a.index(self.ringstellung) # if ringstellung is 'A',
+            self.ringstellung = self.a[index + 1]   # then now it's 'B'
 
 
     def reset(self):
