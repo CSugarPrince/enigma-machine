@@ -79,10 +79,18 @@ class EnigmaMachine():
         self.reset_rotor_settings()
 
     
-    def reset_rotor_settings(self):
+    def reset_rotor_settings(self, pos=None):
         """ Resets rotor settings to ringstellung A, offset A. """
+        
+        # pos has to be int
+        if pos is not None: 
+            self.sockets[pos].reset()
+            return
+
         for i in range(3):
             self.sockets[i+1].reset()
+
+        
 
     
     def print_sockets(self, debug=False):
@@ -231,7 +239,8 @@ class EnigmaMachine():
         if let_1 == let_2:
             raise ValueError("let_1 cannot be the same as let_2")
         if len(self.plugboard) == 10:
-            raise Exception("Plugboard already has maximum of ten pairs.")
+            print("Error: Plugboard already has maximum of ten pairs.")
+            return
            
 
         logging.debug("create_plugboard_pair() called")
