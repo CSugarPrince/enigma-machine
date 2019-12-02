@@ -1,1071 +1,339 @@
 INFO:root:Started
 INFO:root:Keyboard Input: A
-INFO:root:Rotors Position: AAB
+INFO:root:Rotors Position: AAB. Ringstellung: AAA
 INFO:root:Plugboard Encryption: A
 INFO:root:Wheel 3 Encryption: C
 INFO:root:Wheel 2 Encryption: D
 INFO:root:Wheel 1 Encryption: F
-INFO:root:Reflector Encryption: S
-INFO:root:Wheel 1 Encryption: S
-INFO:root:Wheel 2 Encryption: E
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Plugboard Encryption: B
-INFO:root:Output (Lampboard): B
+INFO:root:Reflector Encryption: A
+INFO:root:Wheel 1 Encryption: U
+INFO:root:Wheel 2 Encryption: H
+INFO:root:Wheel 3 Encryption: P
+INFO:root:Plugboard Encryption: P
+INFO:root:Output (Lampboard): P
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: B
-INFO:root:Rotors Position: AAC
+INFO:root:Rotors Position: AAC. Ringstellung: AAA
 INFO:root:Plugboard Encryption: B
 INFO:root:Wheel 3 Encryption: F
 INFO:root:Wheel 2 Encryption: I
 INFO:root:Wheel 1 Encryption: V
-INFO:root:Reflector Encryption: W
-INFO:root:Wheel 1 Encryption: N
-INFO:root:Wheel 2 Encryption: T
-INFO:root:Wheel 3 Encryption: J
-INFO:root:Plugboard Encryption: J
-INFO:root:Output (Lampboard): J
+INFO:root:Reflector Encryption: B
+INFO:root:Wheel 1 Encryption: W
+INFO:root:Wheel 2 Encryption: M
+INFO:root:Wheel 3 Encryption: X
+INFO:root:Plugboard Encryption: X
+INFO:root:Output (Lampboard): X
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: C
-INFO:root:Rotors Position: AAD
+INFO:root:Rotors Position: AAD. Ringstellung: AAA
 INFO:root:Plugboard Encryption: C
 INFO:root:Wheel 3 Encryption: I
 INFO:root:Wheel 2 Encryption: X
 INFO:root:Wheel 1 Encryption: R
-INFO:root:Reflector Encryption: B
-INFO:root:Wheel 1 Encryption: W
-INFO:root:Wheel 2 Encryption: M
-INFO:root:Wheel 3 Encryption: E
-INFO:root:Plugboard Encryption: E
-INFO:root:Output (Lampboard): E
+INFO:root:Reflector Encryption: K
+INFO:root:Wheel 1 Encryption: B
+INFO:root:Wheel 2 Encryption: J
+INFO:root:Wheel 3 Encryption: S
+INFO:root:Plugboard Encryption: S
+INFO:root:Output (Lampboard): S
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: D
-INFO:root:Rotors Position: AAE
+INFO:root:Rotors Position: AAE. Ringstellung: AAA
 INFO:root:Plugboard Encryption: D
 INFO:root:Wheel 3 Encryption: L
 INFO:root:Wheel 2 Encryption: H
 INFO:root:Wheel 1 Encryption: Q
-INFO:root:Reflector Encryption: E
-INFO:root:Wheel 1 Encryption: A
-INFO:root:Wheel 2 Encryption: A
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Plugboard Encryption: L
-INFO:root:Output (Lampboard): L
+INFO:root:Reflector Encryption: T
+INFO:root:Wheel 1 Encryption: L
+INFO:root:Wheel 2 Encryption: K
+INFO:root:Wheel 3 Encryption: V
+INFO:root:Plugboard Encryption: V
+INFO:root:Output (Lampboard): V
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: E
-INFO:root:Rotors Position: AAF
+INFO:root:Rotors Position: AAF. Ringstellung: AAA
 INFO:root:Plugboard Encryption: E
 INFO:root:Wheel 3 Encryption: O
 INFO:root:Wheel 2 Encryption: M
 INFO:root:Wheel 1 Encryption: O
-INFO:root:Reflector Encryption: M
-INFO:root:Wheel 1 Encryption: C
-INFO:root:Wheel 2 Encryption: P
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
+INFO:root:Reflector Encryption: G
+INFO:root:Wheel 1 Encryption: F
+INFO:root:Wheel 2 Encryption: W
+INFO:root:Wheel 3 Encryption: V
+INFO:root:Plugboard Encryption: V
+INFO:root:Output (Lampboard): V
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: F
-INFO:root:Rotors Position: AAG
+INFO:root:Rotors Position: CAI. Ringstellung: KAF
 INFO:root:Plugboard Encryption: F
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Reflector Encryption: O
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Plugboard Encryption: Q
-INFO:root:Output (Lampboard): Q
+INFO:root:Wheel 3 Encryption: O
+INFO:root:Wheel 2 Encryption: M
+INFO:root:Wheel 1 Encryption: T
+INFO:root:Reflector Encryption: Z
+INFO:root:Wheel 1 Encryption: F
+INFO:root:Wheel 2 Encryption: W
+INFO:root:Wheel 3 Encryption: J
+INFO:root:Plugboard Encryption: J
+INFO:root:Output (Lampboard): J
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: G
-INFO:root:Rotors Position: AAH
+INFO:root:Rotors Position: CAJ. Ringstellung: KAF
 INFO:root:Plugboard Encryption: G
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Reflector Encryption: C
+INFO:root:Wheel 3 Encryption: T
+INFO:root:Wheel 2 Encryption: N
+INFO:root:Wheel 1 Encryption: O
+INFO:root:Reflector Encryption: M
+INFO:root:Wheel 1 Encryption: I
+INFO:root:Wheel 2 Encryption: F
+INFO:root:Wheel 3 Encryption: A
+INFO:root:Plugboard Encryption: A
+INFO:root:Output (Lampboard): A
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: H
+INFO:root:Rotors Position: CAK. Ringstellung: KAF
+INFO:root:Plugboard Encryption: H
+INFO:root:Wheel 3 Encryption: U
+INFO:root:Wheel 2 Encryption: P
+INFO:root:Wheel 1 Encryption: Y
+INFO:root:Reflector Encryption: A
+INFO:root:Wheel 1 Encryption: A
+INFO:root:Wheel 2 Encryption: A
+INFO:root:Wheel 3 Encryption: X
+INFO:root:Plugboard Encryption: X
+INFO:root:Output (Lampboard): X
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: I
+INFO:root:Rotors Position: CAL. Ringstellung: KAF
+INFO:root:Plugboard Encryption: I
+INFO:root:Wheel 3 Encryption: S
+INFO:root:Wheel 2 Encryption: Z
+INFO:root:Wheel 1 Encryption: C
+INFO:root:Reflector Encryption: U
+INFO:root:Wheel 1 Encryption: K
+INFO:root:Wheel 2 Encryption: D
+INFO:root:Wheel 3 Encryption: Y
+INFO:root:Plugboard Encryption: Y
+INFO:root:Output (Lampboard): Y
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: J
+INFO:root:Rotors Position: CAM. Ringstellung: KAF
+INFO:root:Plugboard Encryption: J
+INFO:root:Wheel 3 Encryption: B
+INFO:root:Wheel 2 Encryption: J
+INFO:root:Wheel 1 Encryption: S
+INFO:root:Reflector Encryption: F
 INFO:root:Wheel 1 Encryption: Y
 INFO:root:Wheel 2 Encryption: V
 INFO:root:Wheel 3 Encryption: Z
 INFO:root:Plugboard Encryption: Z
 INFO:root:Output (Lampboard): Z
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: H
-INFO:root:Rotors Position: AAI
-INFO:root:Plugboard Encryption: H
-INFO:root:Wheel 3 Encryption: W
-INFO:root:Wheel 2 Encryption: F
-INFO:root:Wheel 1 Encryption: G
-INFO:root:Reflector Encryption: L
-INFO:root:Wheel 1 Encryption: E
+INFO:root:Keyboard Input: K
+INFO:root:Rotors Position: AAB. Ringstellung: AAA
+INFO:root:Plugboard Encryption: K
+INFO:root:Wheel 3 Encryption: C
+INFO:root:Wheel 2 Encryption: O
+INFO:root:Wheel 1 Encryption: Y
+INFO:root:Reflector Encryption: A
+INFO:root:Wheel 1 Encryption: T
+INFO:root:Wheel 2 Encryption: S
+INFO:root:Wheel 3 Encryption: F
+INFO:root:Plugboard Encryption: F
+INFO:root:Output (Lampboard): F
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: L
+INFO:root:Rotors Position: AAC. Ringstellung: AAA
+INFO:root:Plugboard Encryption: L
+INFO:root:Wheel 3 Encryption: F
 INFO:root:Wheel 2 Encryption: Z
-INFO:root:Wheel 3 Encryption: V
-INFO:root:Plugboard Encryption: V
-INFO:root:Output (Lampboard): V
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: I
-INFO:root:Rotors Position: AAJ
-INFO:root:Plugboard Encryption: I
-INFO:root:Wheel 3 Encryption: N
-INFO:root:Wheel 2 Encryption: T
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Reflector Encryption: I
+INFO:root:Wheel 1 Encryption: O
+INFO:root:Reflector Encryption: M
 INFO:root:Wheel 1 Encryption: V
-INFO:root:Wheel 2 Encryption: X
-INFO:root:Wheel 3 Encryption: J
-INFO:root:Plugboard Encryption: J
-INFO:root:Output (Lampboard): J
+INFO:root:Wheel 2 Encryption: D
+INFO:root:Wheel 3 Encryption: U
+INFO:root:Plugboard Encryption: U
+INFO:root:Output (Lampboard): U
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: J
-INFO:root:Rotors Position: AAK
-INFO:root:Plugboard Encryption: J
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Wheel 2 Encryption: Q
+INFO:root:Keyboard Input: M
+INFO:root:Rotors Position: AAD. Ringstellung: AAA
+INFO:root:Plugboard Encryption: M
+INFO:root:Wheel 3 Encryption: U
+INFO:root:Wheel 2 Encryption: K
 INFO:root:Wheel 1 Encryption: X
 INFO:root:Reflector Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Wheel 2 Encryption: S
-INFO:root:Wheel 3 Encryption: W
-INFO:root:Plugboard Encryption: W
-INFO:root:Output (Lampboard): W
+INFO:root:Wheel 1 Encryption: E
+INFO:root:Wheel 2 Encryption: A
+INFO:root:Wheel 3 Encryption: I
+INFO:root:Plugboard Encryption: I
+INFO:root:Output (Lampboard): I
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: K
-INFO:root:Rotors Position: AAL
-INFO:root:Plugboard Encryption: K
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Reflector Encryption: T
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Wheel 2 Encryption: K
+INFO:root:Keyboard Input: N
+INFO:root:Rotors Position: AAE. Ringstellung: AAA
+INFO:root:Plugboard Encryption: N
+INFO:root:Wheel 3 Encryption: S
+INFO:root:Wheel 2 Encryption: T
+INFO:root:Wheel 1 Encryption: A
+INFO:root:Reflector Encryption: Y
+INFO:root:Wheel 1 Encryption: O
+INFO:root:Wheel 2 Encryption: C
 INFO:root:Wheel 3 Encryption: A
 INFO:root:Plugboard Encryption: A
 INFO:root:Output (Lampboard): A
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: L
-INFO:root:Rotors Position: AAM
-INFO:root:Plugboard Encryption: L
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Reflector Encryption: C
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: M
-INFO:root:Rotors Position: AAN
-INFO:root:Plugboard Encryption: M
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Reflector Encryption: T
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Wheel 2 Encryption: K
-INFO:root:Wheel 3 Encryption: X
-INFO:root:Plugboard Encryption: X
-INFO:root:Output (Lampboard): X
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: N
-INFO:root:Rotors Position: AAO
-INFO:root:Plugboard Encryption: N
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Reflector Encryption: O
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Plugboard Encryption: S
-INFO:root:Output (Lampboard): S
-INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: O
-INFO:root:Rotors Position: AAP
+INFO:root:Rotors Position: AAF. Ringstellung: AAA
 INFO:root:Plugboard Encryption: O
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Wheel 2 Encryption: Z
-INFO:root:Wheel 1 Encryption: J
-INFO:root:Reflector Encryption: X
-INFO:root:Wheel 1 Encryption: Q
-INFO:root:Wheel 2 Encryption: Q
-INFO:root:Wheel 3 Encryption: N
-INFO:root:Plugboard Encryption: N
-INFO:root:Output (Lampboard): N
+INFO:root:Wheel 3 Encryption: E
+INFO:root:Wheel 2 Encryption: P
+INFO:root:Wheel 1 Encryption: E
+INFO:root:Reflector Encryption: Q
+INFO:root:Wheel 1 Encryption: Y
+INFO:root:Wheel 2 Encryption: I
+INFO:root:Wheel 3 Encryption: H
+INFO:root:Plugboard Encryption: H
+INFO:root:Output (Lampboard): H
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: P
-INFO:root:Rotors Position: AAQ
+INFO:root:Rotors Position: BKG. Ringstellung: AAA
 INFO:root:Plugboard Encryption: P
-INFO:root:Wheel 3 Encryption: V
-INFO:root:Wheel 2 Encryption: Y
-INFO:root:Wheel 1 Encryption: C
-INFO:root:Reflector Encryption: U
-INFO:root:Wheel 1 Encryption: R
-INFO:root:Wheel 2 Encryption: G
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Plugboard Encryption: B
-INFO:root:Output (Lampboard): B
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Q
-INFO:root:Rotors Position: AAR
-INFO:root:Plugboard Encryption: Q
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Reflector Encryption: A
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 3 Encryption: X
-INFO:root:Plugboard Encryption: X
-INFO:root:Output (Lampboard): X
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: R
-INFO:root:Rotors Position: AAS
-INFO:root:Plugboard Encryption: R
-INFO:root:Wheel 3 Encryption: B
+INFO:root:Wheel 3 Encryption: I
 INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Reflector Encryption: T
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Wheel 2 Encryption: K
-INFO:root:Wheel 3 Encryption: O
-INFO:root:Plugboard Encryption: O
-INFO:root:Output (Lampboard): O
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: S
-INFO:root:Rotors Position: AAT
-INFO:root:Plugboard Encryption: S
-INFO:root:Wheel 3 Encryption: C
-INFO:root:Wheel 2 Encryption: D
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Reflector Encryption: S
-INFO:root:Wheel 1 Encryption: S
-INFO:root:Wheel 2 Encryption: E
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: T
-INFO:root:Rotors Position: AAU
-INFO:root:Plugboard Encryption: T
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Wheel 2 Encryption: N
 INFO:root:Wheel 1 Encryption: W
 INFO:root:Reflector Encryption: V
-INFO:root:Wheel 1 Encryption: I
-INFO:root:Wheel 2 Encryption: F
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Plugboard Encryption: S
-INFO:root:Output (Lampboard): S
+INFO:root:Wheel 1 Encryption: Q
+INFO:root:Wheel 2 Encryption: X
+INFO:root:Wheel 3 Encryption: F
+INFO:root:Plugboard Encryption: F
+INFO:root:Output (Lampboard): F
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: U
-INFO:root:Rotors Position: AAV
-INFO:root:Plugboard Encryption: U
-INFO:root:Wheel 3 Encryption: J
-INFO:root:Wheel 2 Encryption: B
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Reflector Encryption: N
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Wheel 2 Encryption: D
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Plugboard Encryption: T
-INFO:root:Output (Lampboard): T
-INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 3 current setting V, notch ['V']
-INFO:root:Keyboard Input: V
-INFO:root:Rotors Position: ABW
-INFO:root:Plugboard Encryption: V
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Wheel 2 Encryption: I
+INFO:root:Keyboard Input: Q
+INFO:root:Rotors Position: BKH. Ringstellung: AAA
+INFO:root:Plugboard Encryption: Q
+INFO:root:Wheel 3 Encryption: X
+INFO:root:Wheel 2 Encryption: Q
 INFO:root:Wheel 1 Encryption: V
 INFO:root:Reflector Encryption: W
-INFO:root:Wheel 1 Encryption: N
-INFO:root:Wheel 2 Encryption: X
-INFO:root:Wheel 3 Encryption: N
-INFO:root:Plugboard Encryption: N
-INFO:root:Output (Lampboard): N
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: W
-INFO:root:Rotors Position: ABX
-INFO:root:Plugboard Encryption: W
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Reflector Encryption: C
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Wheel 2 Encryption: R
+INFO:root:Wheel 1 Encryption: J
+INFO:root:Wheel 2 Encryption: I
 INFO:root:Wheel 3 Encryption: C
 INFO:root:Plugboard Encryption: C
 INFO:root:Output (Lampboard): C
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: X
-INFO:root:Rotors Position: ABY
-INFO:root:Plugboard Encryption: X
-INFO:root:Wheel 3 Encryption: O
-INFO:root:Wheel 2 Encryption: B
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Reflector Encryption: N
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Plugboard Encryption: F
-INFO:root:Output (Lampboard): F
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Y
-INFO:root:Rotors Position: ABZ
-INFO:root:Plugboard Encryption: Y
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Reflector Encryption: A
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Wheel 2 Encryption: W
-INFO:root:Wheel 3 Encryption: M
-INFO:root:Plugboard Encryption: M
-INFO:root:Output (Lampboard): M
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Z
-INFO:root:Rotors Position: ABA
-INFO:root:Plugboard Encryption: Z
-INFO:root:Wheel 3 Encryption: O
-INFO:root:Wheel 2 Encryption: B
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Reflector Encryption: N
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 3 Encryption: E
-INFO:root:Plugboard Encryption: E
-INFO:root:Output (Lampboard): E
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: A
-INFO:root:Rotors Position: ABB
-INFO:root:Plugboard Encryption: A
-INFO:root:Wheel 3 Encryption: C
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Reflector Encryption: T
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Wheel 2 Encryption: N
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Plugboard Encryption: Y
-INFO:root:Output (Lampboard): Y
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: B
-INFO:root:Rotors Position: ABC
-INFO:root:Plugboard Encryption: B
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Wheel 2 Encryption: Q
-INFO:root:Wheel 1 Encryption: X
-INFO:root:Reflector Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Wheel 2 Encryption: Z
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Plugboard Encryption: Y
-INFO:root:Output (Lampboard): Y
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: C
-INFO:root:Rotors Position: ABD
-INFO:root:Plugboard Encryption: C
-INFO:root:Wheel 3 Encryption: I
-INFO:root:Wheel 2 Encryption: A
-INFO:root:Wheel 1 Encryption: E
-INFO:root:Reflector Encryption: Q
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Wheel 2 Encryption: E
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Plugboard Encryption: A
-INFO:root:Output (Lampboard): A
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: D
-INFO:root:Rotors Position: ABE
-INFO:root:Plugboard Encryption: D
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 1 Encryption: I
-INFO:root:Reflector Encryption: P
-INFO:root:Wheel 1 Encryption: T
-INFO:root:Wheel 2 Encryption: G
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Plugboard Encryption: Q
-INFO:root:Output (Lampboard): Q
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: A
-INFO:root:Rotors Position: AAB
-INFO:root:Plugboard Encryption: D
-INFO:root:Wheel 3 Encryption: K
-INFO:root:Wheel 2 Encryption: X
-INFO:root:Wheel 1 Encryption: V
-INFO:root:Reflector Encryption: W
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 3 Encryption: M
-INFO:root:Plugboard Encryption: M
-INFO:root:Output (Lampboard): M
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: B
-INFO:root:Rotors Position: AAC
-INFO:root:Plugboard Encryption: B
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Reflector Encryption: C
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 3 Encryption: X
-INFO:root:Plugboard Encryption: X
-INFO:root:Output (Lampboard): X
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: C
-INFO:root:Rotors Position: AAD
-INFO:root:Plugboard Encryption: C
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Reflector Encryption: C
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Plugboard Encryption: Y
-INFO:root:Output (Lampboard): Y
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: D
-INFO:root:Rotors Position: AAE
-INFO:root:Plugboard Encryption: A
-INFO:root:Wheel 3 Encryption: H
-INFO:root:Wheel 2 Encryption: P
-INFO:root:Wheel 1 Encryption: C
-INFO:root:Reflector Encryption: U
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Wheel 2 Encryption: D
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Plugboard Encryption: L
-INFO:root:Output (Lampboard): L
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: E
-INFO:root:Rotors Position: AAF
-INFO:root:Plugboard Encryption: E
-INFO:root:Wheel 3 Encryption: U
-INFO:root:Wheel 2 Encryption: K
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Reflector Encryption: G
-INFO:root:Wheel 1 Encryption: R
-INFO:root:Wheel 2 Encryption: I
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Plugboard Encryption: F
-INFO:root:Output (Lampboard): F
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: F
-INFO:root:Rotors Position: AAG
-INFO:root:Plugboard Encryption: F
-INFO:root:Wheel 3 Encryption: N
-INFO:root:Wheel 2 Encryption: N
-INFO:root:Wheel 1 Encryption: T
-INFO:root:Reflector Encryption: Z
-INFO:root:Wheel 1 Encryption: S
-INFO:root:Wheel 2 Encryption: X
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Plugboard Encryption: D
-INFO:root:Output (Lampboard): D
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: G
-INFO:root:Rotors Position: AAH
-INFO:root:Plugboard Encryption: G
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Wheel 2 Encryption: E
-INFO:root:Wheel 1 Encryption: S
-INFO:root:Reflector Encryption: F
-INFO:root:Wheel 1 Encryption: W
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 3 Encryption: H
-INFO:root:Plugboard Encryption: H
-INFO:root:Output (Lampboard): H
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: H
-INFO:root:Rotors Position: AAI
-INFO:root:Plugboard Encryption: H
-INFO:root:Wheel 3 Encryption: Z
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Reflector Encryption: O
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Plugboard Encryption: F
-INFO:root:Output (Lampboard): F
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: I
-INFO:root:Rotors Position: AAJ
-INFO:root:Plugboard Encryption: I
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Reflector Encryption: A
-INFO:root:Wheel 1 Encryption: A
-INFO:root:Wheel 2 Encryption: T
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Plugboard Encryption: P
-INFO:root:Output (Lampboard): P
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: J
-INFO:root:Rotors Position: AAK
-INFO:root:Plugboard Encryption: J
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Wheel 2 Encryption: L
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Reflector Encryption: D
-INFO:root:Wheel 1 Encryption: C
-INFO:root:Wheel 2 Encryption: G
-INFO:root:Wheel 3 Encryption: X
-INFO:root:Plugboard Encryption: X
-INFO:root:Output (Lampboard): X
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: K
-INFO:root:Rotors Position: AAL
-INFO:root:Plugboard Encryption: K
-INFO:root:Wheel 3 Encryption: X
-INFO:root:Wheel 2 Encryption: S
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Reflector Encryption: T
-INFO:root:Wheel 1 Encryption: N
-INFO:root:Wheel 2 Encryption: N
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Plugboard Encryption: A
-INFO:root:Output (Lampboard): A
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: L
-INFO:root:Rotors Position: AAM
-INFO:root:Plugboard Encryption: L
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Wheel 2 Encryption: L
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Reflector Encryption: D
-INFO:root:Wheel 1 Encryption: C
-INFO:root:Wheel 2 Encryption: G
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Plugboard Encryption: G
-INFO:root:Output (Lampboard): G
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: M
-INFO:root:Rotors Position: AAN
-INFO:root:Plugboard Encryption: M
-INFO:root:Wheel 3 Encryption: W
-INFO:root:Wheel 2 Encryption: U
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Reflector Encryption: I
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Plugboard Encryption: G
-INFO:root:Output (Lampboard): G
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: N
-INFO:root:Rotors Position: AAO
-INFO:root:Plugboard Encryption: N
-INFO:root:Wheel 3 Encryption: W
-INFO:root:Wheel 2 Encryption: U
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Reflector Encryption: I
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Plugboard Encryption: T
-INFO:root:Output (Lampboard): T
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: O
-INFO:root:Rotors Position: AAP
-INFO:root:Plugboard Encryption: O
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Wheel 2 Encryption: I
-INFO:root:Wheel 1 Encryption: X
-INFO:root:Reflector Encryption: J
-INFO:root:Wheel 1 Encryption: B
-INFO:root:Wheel 2 Encryption: A
-INFO:root:Wheel 3 Encryption: E
-INFO:root:Plugboard Encryption: E
-INFO:root:Output (Lampboard): E
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: P
-INFO:root:Rotors Position: AAQ
-INFO:root:Plugboard Encryption: P
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Wheel 2 Encryption: I
-INFO:root:Wheel 1 Encryption: X
-INFO:root:Reflector Encryption: J
-INFO:root:Wheel 1 Encryption: B
-INFO:root:Wheel 2 Encryption: A
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
-INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 3 current setting Q, notch ['Q']
-INFO:root:Keyboard Input: Q
-INFO:root:Rotors Position: ABR
-INFO:root:Plugboard Encryption: Q
-INFO:root:Wheel 3 Encryption: Z
-INFO:root:Wheel 2 Encryption: A
-INFO:root:Wheel 1 Encryption: A
-INFO:root:Reflector Encryption: Y
-INFO:root:Wheel 1 Encryption: V
-INFO:root:Wheel 2 Encryption: Q
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Plugboard Encryption: Y
-INFO:root:Output (Lampboard): Y
-INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: R
-INFO:root:Rotors Position: ABS
+INFO:root:Rotors Position: BKI. Ringstellung: AAA
 INFO:root:Plugboard Encryption: R
-INFO:root:Wheel 3 Encryption: H
-INFO:root:Wheel 2 Encryption: Q
+INFO:root:Wheel 3 Encryption: C
+INFO:root:Wheel 2 Encryption: H
 INFO:root:Wheel 1 Encryption: Q
 INFO:root:Reflector Encryption: E
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Wheel 2 Encryption: S
-INFO:root:Wheel 3 Encryption: J
-INFO:root:Plugboard Encryption: J
-INFO:root:Output (Lampboard): J
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: S
-INFO:root:Rotors Position: ABT
-INFO:root:Plugboard Encryption: S
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 1 Encryption: D
-INFO:root:Reflector Encryption: H
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Wheel 2 Encryption: U
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: T
-INFO:root:Rotors Position: ABU
-INFO:root:Plugboard Encryption: T
-INFO:root:Wheel 3 Encryption: C
-INFO:root:Wheel 2 Encryption: G
-INFO:root:Wheel 1 Encryption: R
-INFO:root:Reflector Encryption: B
-INFO:root:Wheel 1 Encryption: J
-INFO:root:Wheel 2 Encryption: T
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Plugboard Encryption: Q
-INFO:root:Output (Lampboard): Q
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: U
-INFO:root:Rotors Position: ABV
-INFO:root:Plugboard Encryption: U
-INFO:root:Wheel 3 Encryption: M
-INFO:root:Wheel 2 Encryption: M
-INFO:root:Wheel 1 Encryption: W
-INFO:root:Reflector Encryption: V
-INFO:root:Wheel 1 Encryption: X
-INFO:root:Wheel 2 Encryption: N
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Plugboard Encryption: D
-INFO:root:Output (Lampboard): D
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: V
-INFO:root:Rotors Position: ABW
-INFO:root:Plugboard Encryption: V
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Wheel 2 Encryption: N
-INFO:root:Wheel 1 Encryption: T
-INFO:root:Reflector Encryption: Z
-INFO:root:Wheel 1 Encryption: S
-INFO:root:Wheel 2 Encryption: I
+INFO:root:Wheel 1 Encryption: B
+INFO:root:Wheel 2 Encryption: F
 INFO:root:Wheel 3 Encryption: E
 INFO:root:Plugboard Encryption: E
 INFO:root:Output (Lampboard): E
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: W
-INFO:root:Rotors Position: ABX
-INFO:root:Plugboard Encryption: W
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Wheel 2 Encryption: Z
-INFO:root:Wheel 1 Encryption: E
-INFO:root:Reflector Encryption: Q
-INFO:root:Wheel 1 Encryption: Q
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Plugboard Encryption: A
-INFO:root:Output (Lampboard): A
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: X
-INFO:root:Rotors Position: ABY
-INFO:root:Plugboard Encryption: X
-INFO:root:Wheel 3 Encryption: K
+INFO:root:Keyboard Input: S
+INFO:root:Rotors Position: BKJ. Ringstellung: AAA
+INFO:root:Plugboard Encryption: S
+INFO:root:Wheel 3 Encryption: Q
 INFO:root:Wheel 2 Encryption: U
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Reflector Encryption: I
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 3 Encryption: V
-INFO:root:Plugboard Encryption: V
-INFO:root:Output (Lampboard): V
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Y
-INFO:root:Rotors Position: ABZ
-INFO:root:Plugboard Encryption: Y
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Wheel 2 Encryption: Z
-INFO:root:Wheel 1 Encryption: E
-INFO:root:Reflector Encryption: Q
-INFO:root:Wheel 1 Encryption: Q
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Plugboard Encryption: G
-INFO:root:Output (Lampboard): G
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Z
-INFO:root:Rotors Position: ABA
-INFO:root:Plugboard Encryption: Z
-INFO:root:Wheel 3 Encryption: J
-INFO:root:Wheel 2 Encryption: W
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Reflector Encryption: S
-INFO:root:Wheel 1 Encryption: E
-INFO:root:Wheel 2 Encryption: B
-INFO:root:Wheel 3 Encryption: W
-INFO:root:Plugboard Encryption: W
-INFO:root:Output (Lampboard): W
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: A
-INFO:root:Rotors Position: ADB
-INFO:root:Plugboard Encryption: A
-INFO:root:Wheel 3 Encryption: C
-INFO:root:Wheel 2 Encryption: F
-INFO:root:Wheel 1 Encryption: G
-INFO:root:Reflector Encryption: L
-INFO:root:Wheel 1 Encryption: E
-INFO:root:Wheel 2 Encryption: I
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Plugboard Encryption: D
-INFO:root:Output (Lampboard): D
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: B
-INFO:root:Rotors Position: ADC
-INFO:root:Plugboard Encryption: B
-INFO:root:Wheel 3 Encryption: F
-INFO:root:Wheel 2 Encryption: U
-INFO:root:Wheel 1 Encryption: A
-INFO:root:Reflector Encryption: Y
-INFO:root:Wheel 1 Encryption: O
-INFO:root:Wheel 2 Encryption: D
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Plugboard Encryption: A
-INFO:root:Output (Lampboard): A
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: C
-INFO:root:Rotors Position: ADD
-INFO:root:Plugboard Encryption: C
-INFO:root:Wheel 3 Encryption: I
-INFO:root:Wheel 2 Encryption: E
 INFO:root:Wheel 1 Encryption: L
 INFO:root:Reflector Encryption: G
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 3 Encryption: Z
-INFO:root:Plugboard Encryption: Z
-INFO:root:Output (Lampboard): Z
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: D
-INFO:root:Rotors Position: ADE
-INFO:root:Plugboard Encryption: D
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 1 Encryption: Z
-INFO:root:Reflector Encryption: T
-INFO:root:Wheel 1 Encryption: L
-INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 3 Encryption: I
-INFO:root:Plugboard Encryption: I
-INFO:root:Output (Lampboard): I
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: E
-INFO:root:Rotors Position: ADF
-INFO:root:Plugboard Encryption: E
-INFO:root:Wheel 3 Encryption: O
-INFO:root:Wheel 2 Encryption: D
-INFO:root:Wheel 1 Encryption: F
-INFO:root:Reflector Encryption: S
-INFO:root:Wheel 1 Encryption: S
-INFO:root:Wheel 2 Encryption: U
-INFO:root:Wheel 3 Encryption: H
-INFO:root:Plugboard Encryption: H
-INFO:root:Output (Lampboard): H
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: F
-INFO:root:Rotors Position: ADG
-INFO:root:Plugboard Encryption: F
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Wheel 2 Encryption: W
-INFO:root:Wheel 1 Encryption: B
-INFO:root:Reflector Encryption: R
-INFO:root:Wheel 1 Encryption: X
-INFO:root:Wheel 2 Encryption: X
-INFO:root:Wheel 3 Encryption: V
-INFO:root:Plugboard Encryption: V
-INFO:root:Output (Lampboard): V
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: G
-INFO:root:Rotors Position: ADH
-INFO:root:Plugboard Encryption: G
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Wheel 2 Encryption: Y
 INFO:root:Wheel 1 Encryption: C
-INFO:root:Reflector Encryption: U
-INFO:root:Wheel 1 Encryption: R
-INFO:root:Wheel 2 Encryption: E
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Plugboard Encryption: Y
-INFO:root:Output (Lampboard): Y
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: H
-INFO:root:Rotors Position: ADI
-INFO:root:Plugboard Encryption: H
-INFO:root:Wheel 3 Encryption: W
-INFO:root:Wheel 2 Encryption: B
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Reflector Encryption: N
-INFO:root:Wheel 1 Encryption: K
-INFO:root:Wheel 2 Encryption: Q
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Plugboard Encryption: G
-INFO:root:Output (Lampboard): G
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: I
-INFO:root:Rotors Position: ADJ
-INFO:root:Plugboard Encryption: I
-INFO:root:Wheel 3 Encryption: N
 INFO:root:Wheel 2 Encryption: N
-INFO:root:Wheel 1 Encryption: W
-INFO:root:Reflector Encryption: V
-INFO:root:Wheel 1 Encryption: I
-INFO:root:Wheel 2 Encryption: H
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Plugboard Encryption: P
-INFO:root:Output (Lampboard): P
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: J
-INFO:root:Rotors Position: ADK
-INFO:root:Plugboard Encryption: J
-INFO:root:Wheel 3 Encryption: Q
-INFO:root:Wheel 2 Encryption: K
-INFO:root:Wheel 1 Encryption: N
-INFO:root:Reflector Encryption: K
-INFO:root:Wheel 1 Encryption: B
-INFO:root:Wheel 2 Encryption: W
 INFO:root:Wheel 3 Encryption: I
 INFO:root:Plugboard Encryption: I
 INFO:root:Output (Lampboard): I
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: K
-INFO:root:Rotors Position: ADL
-INFO:root:Plugboard Encryption: K
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Wheel 2 Encryption: P
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Reflector Encryption: D
-INFO:root:Wheel 1 Encryption: G
-INFO:root:Wheel 2 Encryption: Y
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Plugboard Encryption: T
-INFO:root:Output (Lampboard): T
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: L
-INFO:root:Rotors Position: ADM
-INFO:root:Plugboard Encryption: L
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Wheel 2 Encryption: Y
-INFO:root:Wheel 1 Encryption: C
-INFO:root:Reflector Encryption: U
-INFO:root:Wheel 1 Encryption: R
-INFO:root:Wheel 2 Encryption: E
-INFO:root:Wheel 3 Encryption: M
-INFO:root:Plugboard Encryption: M
-INFO:root:Output (Lampboard): M
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: M
-INFO:root:Rotors Position: ADN
-INFO:root:Plugboard Encryption: M
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Wheel 2 Encryption: P
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Reflector Encryption: D
-INFO:root:Wheel 1 Encryption: G
-INFO:root:Wheel 2 Encryption: Y
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Plugboard Encryption: S
-INFO:root:Output (Lampboard): S
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: N
-INFO:root:Rotors Position: ADO
-INFO:root:Plugboard Encryption: N
-INFO:root:Wheel 3 Encryption: P
-INFO:root:Wheel 2 Encryption: W
-INFO:root:Wheel 1 Encryption: B
-INFO:root:Reflector Encryption: R
-INFO:root:Wheel 1 Encryption: X
-INFO:root:Wheel 2 Encryption: X
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: O
-INFO:root:Rotors Position: ADP
-INFO:root:Plugboard Encryption: O
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 1 Encryption: I
-INFO:root:Reflector Encryption: P
-INFO:root:Wheel 1 Encryption: T
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 3 Encryption: Z
-INFO:root:Plugboard Encryption: Z
-INFO:root:Output (Lampboard): Z
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: P
-INFO:root:Rotors Position: ADQ
-INFO:root:Plugboard Encryption: P
-INFO:root:Wheel 3 Encryption: V
-INFO:root:Wheel 2 Encryption: L
-INFO:root:Wheel 1 Encryption: T
-INFO:root:Reflector Encryption: Z
-INFO:root:Wheel 1 Encryption: J
-INFO:root:Wheel 2 Encryption: L
-INFO:root:Wheel 3 Encryption: K
-INFO:root:Plugboard Encryption: K
-INFO:root:Output (Lampboard): K
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Q
-INFO:root:Rotors Position: ADR
-INFO:root:Plugboard Encryption: Q
-INFO:root:Wheel 3 Encryption: Y
-INFO:root:Wheel 2 Encryption: G
-INFO:root:Wheel 1 Encryption: D
-INFO:root:Reflector Encryption: H
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Wheel 2 Encryption: B
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Plugboard Encryption: G
-INFO:root:Output (Lampboard): G
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: R
-INFO:root:Rotors Position: ADS
-INFO:root:Plugboard Encryption: R
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Wheel 2 Encryption: P
-INFO:root:Wheel 1 Encryption: H
-INFO:root:Reflector Encryption: D
-INFO:root:Wheel 1 Encryption: G
-INFO:root:Wheel 2 Encryption: Y
-INFO:root:Wheel 3 Encryption: G
-INFO:root:Plugboard Encryption: G
-INFO:root:Output (Lampboard): G
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: S
-INFO:root:Rotors Position: ADT
-INFO:root:Plugboard Encryption: S
-INFO:root:Wheel 3 Encryption: C
-INFO:root:Wheel 2 Encryption: F
-INFO:root:Wheel 1 Encryption: G
-INFO:root:Reflector Encryption: L
-INFO:root:Wheel 1 Encryption: E
-INFO:root:Wheel 2 Encryption: I
-INFO:root:Wheel 3 Encryption: H
-INFO:root:Plugboard Encryption: H
-INFO:root:Output (Lampboard): H
 INFO:root:--------------------------------------------------------------------
 INFO:root:Keyboard Input: T
-INFO:root:Rotors Position: ADU
+INFO:root:Rotors Position: BKK. Ringstellung: AAA
 INFO:root:Plugboard Encryption: T
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Wheel 2 Encryption: C
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Reflector Encryption: O
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Plugboard Encryption: L
-INFO:root:Output (Lampboard): L
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: U
-INFO:root:Rotors Position: ADV
-INFO:root:Plugboard Encryption: U
-INFO:root:Wheel 3 Encryption: J
-INFO:root:Wheel 2 Encryption: T
-INFO:root:Wheel 1 Encryption: P
-INFO:root:Reflector Encryption: I
-INFO:root:Wheel 1 Encryption: V
-INFO:root:Wheel 2 Encryption: S
-INFO:root:Wheel 3 Encryption: S
-INFO:root:Plugboard Encryption: S
-INFO:root:Output (Lampboard): S
-INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 3 current setting V, notch ['V']
-INFO:root:Keyboard Input: V
-INFO:root:Rotors Position: AEW
-INFO:root:Plugboard Encryption: V
-INFO:root:Wheel 3 Encryption: A
-INFO:root:Wheel 2 Encryption: O
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Reflector Encryption: A
-INFO:root:Wheel 1 Encryption: U
-INFO:root:Wheel 2 Encryption: R
-INFO:root:Wheel 3 Encryption: R
-INFO:root:Plugboard Encryption: R
-INFO:root:Output (Lampboard): R
-INFO:root:--------------------------------------------------------------------
-INFO:root:Wheel 2 current setting E, notch ['E']
-INFO:root:Keyboard Input: W
-INFO:root:Rotors Position: BFX
-INFO:root:Plugboard Encryption: W
-INFO:root:Wheel 3 Encryption: D
-INFO:root:Wheel 2 Encryption: S
-INFO:root:Wheel 1 Encryption: O
-INFO:root:Reflector Encryption: M
-INFO:root:Wheel 1 Encryption: J
-INFO:root:Wheel 2 Encryption: T
-INFO:root:Wheel 3 Encryption: B
-INFO:root:Plugboard Encryption: B
-INFO:root:Output (Lampboard): B
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: X
-INFO:root:Rotors Position: BFY
-INFO:root:Plugboard Encryption: X
-INFO:root:Wheel 3 Encryption: O
-INFO:root:Wheel 2 Encryption: I
-INFO:root:Wheel 1 Encryption: Y
-INFO:root:Reflector Encryption: A
-INFO:root:Wheel 1 Encryption: V
+INFO:root:Wheel 3 Encryption: H
 INFO:root:Wheel 2 Encryption: V
-INFO:root:Wheel 3 Encryption: L
-INFO:root:Plugboard Encryption: L
-INFO:root:Output (Lampboard): L
-INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Y
-INFO:root:Rotors Position: BFZ
-INFO:root:Plugboard Encryption: Y
-INFO:root:Wheel 3 Encryption: T
-INFO:root:Wheel 2 Encryption: J
-INFO:root:Wheel 1 Encryption: M
-INFO:root:Reflector Encryption: O
+INFO:root:Wheel 1 Encryption: T
+INFO:root:Reflector Encryption: Z
 INFO:root:Wheel 1 Encryption: S
-INFO:root:Wheel 2 Encryption: D
+INFO:root:Wheel 2 Encryption: M
 INFO:root:Wheel 3 Encryption: H
 INFO:root:Plugboard Encryption: H
 INFO:root:Output (Lampboard): H
 INFO:root:--------------------------------------------------------------------
-INFO:root:Keyboard Input: Z
-INFO:root:Rotors Position: BFA
-INFO:root:Plugboard Encryption: Z
-INFO:root:Wheel 3 Encryption: O
-INFO:root:Wheel 2 Encryption: I
+INFO:root:Keyboard Input: U
+INFO:root:Rotors Position: BKL. Ringstellung: AAA
+INFO:root:Plugboard Encryption: A
+INFO:root:Wheel 3 Encryption: S
+INFO:root:Wheel 2 Encryption: E
+INFO:root:Wheel 1 Encryption: K
+INFO:root:Reflector Encryption: N
 INFO:root:Wheel 1 Encryption: Y
-INFO:root:Reflector Encryption: A
-INFO:root:Wheel 1 Encryption: V
-INFO:root:Wheel 2 Encryption: V
+INFO:root:Wheel 2 Encryption: B
+INFO:root:Wheel 3 Encryption: H
+INFO:root:Plugboard Encryption: H
+INFO:root:Output (Lampboard): H
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: V
+INFO:root:Rotors Position: BKM. Ringstellung: AAA
+INFO:root:Plugboard Encryption: D
 INFO:root:Wheel 3 Encryption: L
-INFO:root:Plugboard Encryption: L
-INFO:root:Output (Lampboard): L
+INFO:root:Wheel 2 Encryption: T
+INFO:root:Wheel 1 Encryption: J
+INFO:root:Reflector Encryption: X
+INFO:root:Wheel 1 Encryption: N
+INFO:root:Wheel 2 Encryption: E
+INFO:root:Wheel 3 Encryption: I
+INFO:root:Plugboard Encryption: I
+INFO:root:Output (Lampboard): I
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: W
+INFO:root:Rotors Position: BKN. Ringstellung: AAA
+INFO:root:Plugboard Encryption: W
+INFO:root:Wheel 3 Encryption: C
+INFO:root:Wheel 2 Encryption: H
+INFO:root:Wheel 1 Encryption: Q
+INFO:root:Reflector Encryption: E
+INFO:root:Wheel 1 Encryption: B
+INFO:root:Wheel 2 Encryption: F
+INFO:root:Wheel 3 Encryption: X
+INFO:root:Plugboard Encryption: X
+INFO:root:Output (Lampboard): X
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: X
+INFO:root:Rotors Position: BKO. Ringstellung: AAA
+INFO:root:Plugboard Encryption: X
+INFO:root:Wheel 3 Encryption: P
+INFO:root:Wheel 2 Encryption: R
+INFO:root:Wheel 1 Encryption: F
+INFO:root:Reflector Encryption: S
+INFO:root:Wheel 1 Encryption: I
+INFO:root:Wheel 2 Encryption: R
+INFO:root:Wheel 3 Encryption: I
+INFO:root:Plugboard Encryption: I
+INFO:root:Output (Lampboard): I
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: Y
+INFO:root:Rotors Position: BKP. Ringstellung: AAA
+INFO:root:Plugboard Encryption: Y
+INFO:root:Wheel 3 Encryption: S
+INFO:root:Wheel 2 Encryption: E
+INFO:root:Wheel 1 Encryption: K
+INFO:root:Reflector Encryption: N
+INFO:root:Wheel 1 Encryption: Y
+INFO:root:Wheel 2 Encryption: B
+INFO:root:Wheel 3 Encryption: F
+INFO:root:Plugboard Encryption: F
+INFO:root:Output (Lampboard): F
+INFO:root:--------------------------------------------------------------------
+INFO:root:Keyboard Input: Z
+INFO:root:Rotors Position: BKQ. Ringstellung: AAA
+INFO:root:Plugboard Encryption: Z
+INFO:root:Wheel 3 Encryption: H
+INFO:root:Wheel 2 Encryption: V
+INFO:root:Wheel 1 Encryption: T
+INFO:root:Reflector Encryption: Z
+INFO:root:Wheel 1 Encryption: S
+INFO:root:Wheel 2 Encryption: M
+INFO:root:Wheel 3 Encryption: I
+INFO:root:Plugboard Encryption: I
+INFO:root:Output (Lampboard): I
 INFO:root:--------------------------------------------------------------------

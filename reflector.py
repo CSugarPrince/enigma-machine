@@ -8,20 +8,17 @@ class Reflector():
         
         # Create contact map for reflector
         self.alphabet_map = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-        self.contact_map = [self.alphabet_map.index(let) for let in contact_map]
+        self.contact_map = [letter for letter in contact_map]
 
     
-    def encrypt(self, p):
+    def encrypt(self, letter):
         """ No fancy arithmetic since reflectors do not rotate. """
+        if letter not in self.alphabet_map:
+            raise ValueError("letter must be uppercase alphabetical character.")
 
-        if p < 0 or p > 26:
-            raise ValueError("p must between 0 and 26 inclusive.")
-
-        logging.debug("Reflector.encrypt(). Type {}".format(self.type))
-        logging.debug("p is {}. alphabetic form is {}".format(p, self.alphabet_map[p]))
-
+        p = self.alphabet_map.index(letter)
         exit_p = self.contact_map[p]
-        logging.debug("signal exits at position {}. alphabetic form is {}".format(exit_p, self.alphabet_map[exit_p]))
+        
 
         return exit_p
 
