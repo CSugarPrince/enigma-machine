@@ -1,0 +1,34 @@
+Include overview of what system is intended to do, how it does it, tests performed, references to 
+previous work and resources used, development environment and any algorithms used; include significant 
+software architecture elements (structures and procedures/methods/functions) and how they work. 
+These latter may be broken out into a programmer/maintainer guide (useful to you for future reference). 
+
+System Overview:
+A command line program that simulates the German M3 Enigma Machine.
+
+Implementation:
+The program is divided into two components: the UI in main.py and the Enigma machine in enigma.py.
+enigma.py assimilates the Rotor class in Rotor.py and the Reflector class in Reflector.py
+
+
+Tests Performed:
+- Code tests for rotor functionalities can be found at bottom of rotor.py
+- Code tests for enigma machine core functionalities can be found at bottom of enigma.py
+- Manual tests performed for UI.
+
+References to Previous Work and Resources Used:
+- Used Cmd class and style of implemeting the UI the same way as in previous projects.
+
+Development Environemnt:
+- Windows, python3 and base packages installed. No other dependencies.
+
+Significant Software Architecture Elements:
+- EnigmaMachine: 
+    - Contains enrypt & rotate functions along with other core functions. 
+    - Contains plugboard. 
+    - Utilizes rotor and reflector classes.
+- Rotor: represents physical rotor. 
+    - Can be instantiated to simulate rotor of any type. 
+    - Contains encrypt and backwards_encrypt methods.
+- Reflector: can be instantiated to simulate any reflector type. includes encrypt method.
+
