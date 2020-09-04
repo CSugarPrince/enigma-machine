@@ -1,5 +1,5 @@
 # enigma-machine
-Final project for Intro to Cryptology. A program that simulates the M3 Enigma Machine.
+The final project for my Cryptography course at UF. Written in Python, this program is an accurate simulation of the Enigma Machine, a device used by Nazi Germany to encode and decode messages during WWII. 
 
 User Reference:
 
